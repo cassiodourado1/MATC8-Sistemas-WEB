@@ -1,0 +1,21 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 29 Jun 2017 15:47:32 at http://www.consultaenderecos.com.br +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.consultaenderecos.com.br -O1 "C:\My Web Sites\sistemas web" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/fonts/glyphicons-halflings-regular.eot (from www.consultaenderecos.com.br/assets/bootstrap-023c4d82f20da127ad05835788265923.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/fonts/glyphicons-halflings-regular.eot? (from www.consultaenderecos.com.br/assets/bootstrap-023c4d82f20da127ad05835788265923.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/fonts/glyphicons-halflings-regular.woff (from www.consultaenderecos.com.br/assets/bootstrap-023c4d82f20da127ad05835788265923.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/fonts/glyphicons-halflings-regular.ttf (from www.consultaenderecos.com.br/assets/bootstrap-023c4d82f20da127ad05835788265923.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/fonts/glyphicons-halflings-regular.svg (from www.consultaenderecos.com.br/assets/bootstrap-023c4d82f20da127ad05835788265923.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/assets/fonts/fontawesome-webfont.eot?v=4.0.3 (from www.consultaenderecos.com.br/assets/font-awesome-069347923bdc32a4b84ee8e756a3137a.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/assets/fonts/fontawesome-webfont.eot? (from www.consultaenderecos.com.br/assets/font-awesome-069347923bdc32a4b84ee8e756a3137a.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/assets/fonts/fontawesome-webfont.woff?v=4.0.3 (from www.consultaenderecos.com.br/assets/font-awesome-069347923bdc32a4b84ee8e756a3137a.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/assets/fonts/fontawesome-webfont.ttf?v=4.0.3 (from www.consultaenderecos.com.br/assets/font-awesome-069347923bdc32a4b84ee8e756a3137a.css?body=1)
+15:47:58	Error: 	"Not Found" (404) at link www.consultaenderecos.com.br/assets/fonts/fontawesome-webfont.svg?v=4.0.3 (from www.consultaenderecos.com.br/assets/font-awesome-069347923bdc32a4b84ee8e756a3137a.css?body=1)
+
+HTTrack Website Copier/3.49-2 mirror complete in 26 seconds : 41 links scanned, 30 files written (1515628 bytes overall) [665714 bytes received at 25604 bytes/sec], 1252121 bytes transferred using HTTP compression in 35 files, ratio 29%, 3.4 requests per connection
+(10 errors, 0 warnings, 0 messages)

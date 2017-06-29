@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.consultaenderecos.com.br	TRUE	/	FALSE	1999999999	request_method	GET
+.google.com	TRUE	/	FALSE	1999999999	NID	106=IdECECbkAHRuvJC_JXPo580bKROYWTIQZkJYrL4k1qC8RH1fNpgsj9D5RH_yaTLug87B2rXpYgFmp8UVBkOEpB3dxcwjGKfP82GQz5y09nghH5ZBAgnf2MbuGUoAqlfc
+www.consultaenderecos.com.br	TRUE	/	FALSE	1999999999	_consultaenderecos_session	QjIweUUvTkZvaXRyWkQ3OHdLcDJ2SlR5S1dKdUdhb0NxYU44Q1Rvb0w2anhob0hYVlkyc1puSm01a1p6VTVsSFQyby8wdldZREJ1N0VXMkRzM2RTd0lLQ05UQkdZRVJ2VkF3UTNZVjg3bVg0cTQ3MEdXcXNSdmtBcWpmd1lQSVBwaTNmZmFjVEVDTDd6eGdlOUhTNUpBPT0tLUhIUCtXM3BvNHB5MlNwSjkwZVdka0E9PQ%3D%3D--e40d19941d1075234716b9d8587f41d83b6b3831
+
