@@ -1,0 +1,21 @@
+:host {	
+--bg-color: #FDC401;
+--bg-color-two: #FEC904;
+}
+
+.bg-faded {
+	background: none;
+}
+
+.jumbotron, .bg-faded {
+	background: rgb(253,196,1);
+	background: -webkit-linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
+	background: -o-linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
+	background: linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdc401', endColorstr='#fec904',GradientType=0 );
+}
+
+.button {
+	background: #DE5D01;
+	background: none;
+}
