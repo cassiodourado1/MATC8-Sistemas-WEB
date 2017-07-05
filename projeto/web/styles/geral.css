@@ -7,6 +7,12 @@
 	background: none;
 }
 
+.tit_page {
+	text-shadow: 2px 1px 1px rgba(9,8,8,0.5);
+    text-decoration: none;
+	color: #fff;
+}
+
 .jumbotron, .bg-faded {
 	background: rgb(253,196,1);
 	background: -webkit-linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
@@ -18,4 +24,18 @@
 .button {
 	background: #DE5D01;
 	background: none;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
