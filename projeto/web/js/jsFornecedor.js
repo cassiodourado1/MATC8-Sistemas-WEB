@@ -3,7 +3,7 @@ window.onload = function () {
     var editarJs = document.getElementById("editar");
     var excluirJs = document.getElementById("excluir");
     var localizarJs = document.getElementById("localizar");
-    
+    //teste de commit
   
     cadastrarJs.onclick = function () {
        // alert("clicou em cadastrar");
