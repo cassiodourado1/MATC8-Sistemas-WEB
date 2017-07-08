@@ -30,3 +30,6 @@ As entregas deverão ser feitas pelo Moodle com exceção da declaração de mem
 A apresentação final terá duração de 10 minutos. O app deverá ser apresentado rodando localmente e slides deverão apresentar a proposta, o desenvolvimento e os resultados do mesmo. A equipe deve trabalhar em conjunto e preparar igualmente todos os seus membros em cada aspecto do projeto. Durante apresentação final cada aluno poderá ser indagado arbitrariamente pelo
 professor.
 
+#TODO list
+  - exportar banco para servidor web
+  - hostear servidor na web
