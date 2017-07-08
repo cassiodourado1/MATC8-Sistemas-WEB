@@ -3,11 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/QueroQuentinha/MATC8-Sistemas-WEB/projeto/web/styles/geral.css</file>
-            <file>file:/C:/xampp/htdocs/QueroQuentinha/MATC8-Sistemas-WEB/projeto/web/Banco/QueroQuentinha1.0.sql</file>
-            <file>file:/C:/xampp/htdocs/QueroQuentinha/MATC8-Sistemas-WEB/projeto/web/index.html</file>
-            <file>file:/C:/xampp/htdocs/QueroQuentinha/MATC8-Sistemas-WEB/projeto/web/php/fornecedor/cadastra.php</file>
-            <file>file:/C:/xampp/htdocs/QueroQuentinha/MATC8-Sistemas-WEB/projeto/web/js/jsFornecedor.js</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/js/jsLogin.js</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/fornecedor.html</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/php/fornecedor/cadastra.php</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/php/login/valida.php</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/index.html</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/buscaCep.js</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/CSS/login.css</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/php/data.php</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/login.html</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/js/jsFornecedor.js</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/mapa.js</file>
+            <file>file:/C:/xampp/htdocs/QueroQuentinha/.gitignore</file>
         </group>
     </open-files>
 </project-private>
