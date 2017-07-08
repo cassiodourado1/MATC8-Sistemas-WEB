@@ -1,5 +1,7 @@
 ﻿<?php
 
+
+
 include("../data.php");
 //dados pessoais
 $nome = $_GET['nome'];
