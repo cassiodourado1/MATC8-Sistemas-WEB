@@ -1,7 +1,5 @@
 ﻿<?php
 
-
-
 include("../data.php");
 //dados pessoais
 $nome = $_GET['nome'];
@@ -36,7 +34,7 @@ if ($query1 == 1) {
                                 `cep`,`complemento`,`latitude`,`longitude`)
                    VALUES ('$logradouro','$bairro','$numero','$cidade','$cep','$complemento','$latitude','$longitude')");
     
-    $endereco = @mysqli_query($_SG['link'],"SELECT LAST_INSERT_ID() INTO @id_endereco");
+    $endereco = mysqli_insert_id($_SG['link']);
     
     //cadastra fornecedor com o id do endereço de cima
     @mysqli_query($_SG['link'],"INSERT INTO `quero_quentinha`.`fornecedor`(`nome`,`telefone`,`email`,
