@@ -1,0 +1,58 @@
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title> Cadastro de Fornecedor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1743314322639796',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();   
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+  <center><h2> Mapa Geral de Fornecedores </h2></center>
+
+	<div class="container-fluid">
+
+		<div class="jumbotron" style="margin-top: 5%;">
+
+      <div id="mapa" style="height: 500px; width: 100%"></div>
+
+		</div> <!-- /jumbotron -->
+	</div> <!-- /container -->
+</body>
+
+<!-- Bootstrap Javascript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Maps API Javascript -->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
+
+<!-- Arquivo js contendo funções de manipulação de mapa-->
+<script type="text/javascript" src="js/mapageral.js"></script>
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
+</html>
+
+
