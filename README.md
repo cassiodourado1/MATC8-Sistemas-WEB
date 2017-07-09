@@ -35,8 +35,7 @@ professor.
  [ ] hostear servidor na web
  [ ] layout (Cassio)
  [ ] verificação de login ao abrir a página e mostrar que usuario esta logado no sistema (David)
- [ ] renderização dos mapas dos fornecedores (David / Diego) 
  [ ] validação de formulario fornecedor (Alexandre)
  [ ] alterar validação do campo CEP (mensagem de erro)
  [ ] redirecionar tela apos cadastrar (David)
- [x] visualização de fornecedores numa tela num mapa (Diego). mapageral.html
+ [x] visualização de fornecedores numa pagina contendo mapa (Diego). mapageral.html
