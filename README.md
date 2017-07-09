@@ -31,5 +31,12 @@ A apresentação final terá duração de 10 minutos. O app deverá ser apresent
 professor.
 
 #TODO list
-  - exportar banco para servidor web
-  - hostear servidor na web
+  + exportar banco para servidor web
+  + hostear servidor na web
+  - layout (Cassio)
+  - verificação de login ao abrir a página e mostrar que usuario esta logado no sistema (David)
+  - renderização dos mapas dos fornecedores (David / Diego) 
+  - validação de formulario fornecedor (Alexandre)
+    - alterar validação do campo CEP (mensagem de erro)
+  - redirecionar tela apos cadastrar (David)
+  - visualização de fornecedores numa tela num mapa (Diego)
