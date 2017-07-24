@@ -1,167 +1,186 @@
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-   
-    <link rel="stylesheet" type="text/css" href="css/easyui.css">
 
-    <title> Cadastro de Fornecedor</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/easyui.css">
 
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    
-    <link href="css/estilo.css" rel="stylesheet">
+	<title> Cadastro de Fornecedor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	<link href="css/estilo.css" rel="stylesheet">
 </head>
 
 <body ng-app="myapp">
-    <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1743314322639796',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();   
-  };
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1743314322639796',
+				cookie     : true,
+				xfbml      : true,
+				version    : 'v2.8'
+			});
+			FB.AppEvents.logPageView();   
+		};
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-                    <h2> Cadastro de Fornecedores </h2>
-
-	<div ng-controller="cepController" class="container-fluid">
-
-		<div class="jumbotron" style="margin-top: 5%;">
-     		<div class="row">
-    <div class="col-lg-6">
-
-            <form class="form-horizontal" method="post" name="form">
-                    <fieldset>
-
-                    <div class="form-group">
-                        <label class="col-lg-1 control-label font-form">Nome</label>
-                        <div class="col-lg-4">
-                                <input type="text" id="nome" class="form-control col-md-4" ng-model="nome"><br>
-                        </div>
-
-                        <label class="col-lg-2 control-label font-form">CPF/CNPJ</label>
-                        <div class="col-lg-4">
-                                <input type="text" id="cpfcnpj" class="form-control col-md-4" ng-model="cpfcnpj"><br>
-                        </div>                                                          
-
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-1 control-label font-form">Telefone</label>
-                        <div class="col-lg-4">
-                                <input type="text" id="telefone" class="form-control col-md-4" ng-model="telefone"><br>
-                        </div>
-
-                        <label class="col-lg-2 control-label font-form">Email</label>
-                        <div class="col-lg-4">
-                                <input type="text" id="email" class="form-control col-md-4" ng-model="email"><br>
-                        </div>                                                          
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label class="col-lg-1 control-label font-form">Site</label>
-                        <div class="col-lg-4">
-                                <input type="text" id="site" class="form-control col-md-4" ng-model="site"><br>
-                        </div>                                                          
-
-                        <label class="col-lg-2 control-label font-form">Senha</label>
-                        <div class="col-lg-4">
-                                <input type="password" id="senha" class="form-control col-md-4" ng-model="senha"><br>
-                        </div>
-
-                    </div>
-
-                    <div class="form-group col-lg-12">
-                            <label class="col-lg-1 control-label font-form">CEP</label>
-                            <div class="col-lg-3">
-                                <input type="text" id="cep" class="form-control" ng-model="cep"  placeholder="só números">
-                            </div>
-                            <label class="col-lg-1 control-label font-form">Numero</label>
-                            <div class="col-lg-2">
-                                    <input type="text" id="numero" class="form-control" ng-model="numero"><br>
-                            </div>
-                             <label class="col-lg-2 control-label font-form">Complemento</label>
-                            <div class="col-lg-3">
-                                    <input type="text" id="complemento"  class="form-control" ng-model="complemento"><br>
-                            </div>
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            QueroQuentinha 
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fornecedor.html">Cadastrar Fornecedor <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mapageral.html">Visualizar Fornecedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
-                    </div>
-                    <div class="form-group col-lg-12">
-                           <div class="col-lg-9">
-                                    <input type="submit" id="btnMapstemp" class="btn btn-primary btn-sm" value="Buscar CEP" ng-click="endereco.doClick(item, $event)">
-                            </div>
+	<div ng-controller="cepController" class="container">
+		 <h2> Cadastro de Fornecedores </h2>
+
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post" name="form">                                        
+					<div class="form-group col-md-6">
+						<label for="name" class="col-2 col-form-label">Nome</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="nome" ng-model="nome">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="cpfcnpj" class="col-2 col-form-label">CPF/CNPJ</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="cpfcnpj" ng-model="cpfcnpj">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="telefone" class="col-2 col-form-label">Telefone</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="telefone" ng-model="telefone">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="email" class="col-2 col-form-label">Email</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="email" ng-model="email">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="site" class="col-2 col-form-label">Site</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="site" ng-model="site">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="senha" class="col-2 col-form-label">Senha</label>
+						<div class="col-10">
+							<input class="form-control" type="password" id="senha" ng-model="senha">
+						</div>
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="cep" class="col-2 col-form-label">CEP</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="cep" ng-model="cep">
+						</div>
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="numero" class="col-2 col-form-label">Numero</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="numero" ng-model="numero">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="complemento" class="col-2 col-form-label">Complemento</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="complemento" ng-model="complemento">
+						</div>
+					</div>
+
+					<div class="btn-group btn-group-md" role="group" aria-label="...">
+						<input type="submit" id="btnMapstemp" class="btn btn-primary btn-sm" value="Buscar CEP" ng-click="endereco.doClick(item, $event)">
+					</div>
+					<div class="form-group">
 
 
+						<label class="col-lg-2 control-label font-form">Logradouro</label>
+						<div class="col-lg-4">
+							<input type="text" id="logradouro" class="form-control col-lg-2" ng-model="endereco.logradouro" disabled=""><br>
+						</div>
 
-                    </div>
-                    <div class="form-group">
+					</div>
 
-
-
-                            <label class="col-lg-2 control-label font-form">Logradouro</label>
-                            <div class="col-lg-4">
-                                    <input type="text" id="logradouro" class="form-control col-lg-2" ng-model="endereco.logradouro" disabled=""><br>
-                            </div>
-
-                    </div>
-
-                    <div class="form-group">
+					<div class="form-group">
 
 
-                            <label class="col-lg-1 control-label font-form">Bairro</label>
-                            <div class="col-lg-2">
-                                    <input type="text" id="bairro" class="form-control" ng-model="endereco.bairro" disabled=""><br>
-                            </div>
+						<label class="col-lg-1 control-label font-form">Bairro</label>
+						<div class="col-lg-2">
+							<input type="text" id="bairro" class="form-control" ng-model="endereco.bairro" disabled=""><br>
+						</div>
 
-                            <label class="col-lg-1 control-label font-form">Cidade</label>
-                            <div class="col-lg-2">
-                                    <input type="text" id="cidade" class="form-control" ng-model="endereco.cidade" disabled=""><br>
-                            </div>
-                            <label class="col-lg-1 control-label font-form">UF</label>
-                            <div class="col-lg-2">
-                                    <input type="text" id="uf" class="form-control col-lg-2" ng-model="endereco.estado" disabled=""><br>
-                            </div>
-                            <p style="text-align:right;">
-                                    <input type="submit" class="btn btn-primary btn-sm col-md-2" id="btnMaps" value="Mostrar no mapa"/>
-                            </p>
-                    </div>
+						<label class="col-lg-1 control-label font-form">Cidade</label>
+						<div class="col-lg-2">
+							<input type="text" id="cidade" class="form-control" ng-model="endereco.cidade" disabled=""><br>
+						</div>
+						<label class="col-lg-1 control-label font-form">UF</label>
+						<div class="col-lg-2">
+							<input type="text" id="uf" class="form-control col-lg-2" ng-model="endereco.estado" disabled=""><br>
+						</div>
+						<p style="text-align:right;">
+							<input type="submit" class="btn btn-primary btn-sm col-md-2" id="btnMaps" value="Mostrar no mapa"/>
+						</p>
+					</div>                                                
+				</form>  
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron" style="margin-top: 5%;">
+					<div id="mapa" style="height: 328px; width: 100%"></div>                        
+				</div>
+			</div>
+		</div>
 
-                    <div class="form-group">
+	</div>
 
-                    </div>
-
-                    </fieldset>
-            </form>
-
-            <input type="submit" class="btn btn-primary btn-sm col-md-3" value=" Cadastrar " id="cadastrar" name="cadastrar">
-<!--            <input type="submit" class="btn btn-primary btn-sm col-md-3" value=" Alterar " id="editar" name="editar">
-            <input type="submit" class="btn btn-primary btn-sm col-md-3" value=" Excluir " id="excluir" name="excluir">
-            <input type="submit" class="btn btn-primary btn-sm col-md-3" value=" Localizar " id="localizar" name="localizar">-->
-
-    </div> <!-- /container meio - formulario-->
-
-    <div class="col-lg-5">
-            <div id="mapa" style="height: 328px; width: 100%"></div>
-    </div>
-
-			</div> <!-- /row -->
-		</div> <!-- /jumbotron -->
-	</div> <!-- /container -->
+	
+</div> <!-- /container -->
 </body>
 
 <!-- Bootstrap Javascript -->
@@ -177,10 +196,10 @@
 <!-- Inicialização do mapa -->
 <script src="js/mapa.js"></script>
 
- <script src="js/jsFornecedor.js"></script>
-    <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="js/jsUtils.js"></script>
+<script src="js/jsFornecedor.js"></script>
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/jsUtils.js"></script>
 </html>
 
 

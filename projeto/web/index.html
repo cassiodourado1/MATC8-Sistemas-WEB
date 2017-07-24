@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,58 +14,67 @@
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  			<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<a class="navbar-brand" href="#">
-  			<img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-  		  QueroQuentinha 
-  		</a>
-    
-  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  			<ul class="navbar-nav mr-auto">
-  				<li class="nav-item active">
-  					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-  				</li>
-  				<li class="nav-item">
-             <a class="nav-link" href="fornecedor.html">Cadastrar Fornecedor</a>
-  				</li>
-  				<li class="nav-item">
-             <a class="nav-link" href="mapageral.html">Visualizar Fornecedores</a>
-  				</li>
-  				<li class="nav-item">
-             <a class="nav-link" href="login.html">Login</a>
-  				</li>
-  			</ul>
-  		</div>
-  	</nav>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            QueroQuentinha 
+        </a>
         
-        <div class="jumbotron">
-            <div class="container">
-                    <h1 class="tit_page">Quero Quentinha - Busca de CEP</h1>
-                    <p>Cadastro de fornecedores</p>  			
-                <form name="verifyForm" ng-submit="submitForm()" novalidate>
-                    <div class="input-group input-group-lg col-xs-1" style="margin: auto;" ng-class="{'has-error': verifyForm.verifyCode.$invalid}">
-                        <input type="text" class="form-control" placeholder="informe o CEP" style="min-width:15em">
-                        <span class="input-group-addon"  style="background-color:#6e5cbf;" role="button">
-                            <span id="filter" onclick="submitForm();" style="color: #ffffff">
-                                buscar CEP
-                            </span>
-                        </span>
-                    </div>
-                </form>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fornecedor.html">Cadastrar Fornecedor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mapageral.html">Visualizar Fornecedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
         </div>
-                <a href="fornecedor.html">Cadastrar Fornecedor</a>
-                <a href="mapageral.html">Visualizar Fornecedores</a>
-                <a href="login.html">Login</a>
-
-
+    </nav>
+    
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="tit_page">Quero Quentinha - Busca de CEP</h1>
+            <p>Cadastro de fornecedores</p>  			
+            <form name="verifyForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group input-group-lg col-xs-1" style="margin: auto;" ng-class="{'has-error': verifyForm.verifyCode.$invalid}">
+                    <input type="text" class="form-control" placeholder="informe o CEP" style="min-width:15em">
+                    <span class="input-group-addon"  style="background-color:#6e5cbf;" role="button">
+                        <span id="filter" onclick="submitForm();" style="color: #ffffff">
+                            buscar CEP
+                        </span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <ul class="nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="fornecedor.html">Cadastrar Fornecedor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="mapageral.html">Visualizar Fornecedores</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+        </li>
+    </ul>
+    
+    
 </body>
 
 <!-- Bootstrap Javascript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- 
+
 <!-- Maps API Javascript -->
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
 </html>
