@@ -9,32 +9,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<!--	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>-->
 	<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 	<link href="css/estilo.css" rel="stylesheet">
 </head>
 
-<body ng-app="myapp">
-	<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '1743314322639796',
-				cookie     : true,
-				xfbml      : true,
-				version    : 'v2.8'
-			});
-			FB.AppEvents.logPageView();   
-		};
-
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
+<body>
+	
 	
 	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,84 +46,82 @@
     </nav>
 
 
-	<div ng-controller="cepController" class="container">
-		 <h2> Cadastro de Fornecedores </h2>
+	<div ng-controller="BucadorCEP" class="container">  <!-- Controle do Buscador de CEP ng-controller é Angular-->
 
+		 <h2> Cadastro de Fornecedores </h2>
 		<div class="row">
 			<div class="col-md-12">
-				<form method="post" name="form">                                        
 					<div class="form-group col-md-6">
 						<label for="name" class="col-2 col-form-label">Nome</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="nome" ng-model="nome">
+							<input class="form-control" type="text" id="nome" >
 						</div>
 					</div>
-
 					<div class="form-group col-md-6">
 						<label for="cpfcnpj" class="col-2 col-form-label">CPF/CNPJ</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="cpfcnpj" ng-model="cpfcnpj">
+							<input class="form-control" type="text" id="cpfcnpj">
 						</div>
 					</div>
 
 					<div class="form-group col-md-6">
 						<label for="telefone" class="col-2 col-form-label">Telefone</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="telefone" ng-model="telefone">
+							<input class="form-control" type="text" id="telefone" >
 						</div>
 					</div>
 
 					<div class="form-group col-md-6">
 						<label for="email" class="col-2 col-form-label">Email</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="email" ng-model="email">
+							<input class="form-control" type="text" id="email" >
 						</div>
 					</div>
 
 					<div class="form-group col-md-6">
 						<label for="site" class="col-2 col-form-label">Site</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="site" ng-model="site">
+							<input class="form-control" type="text" id="site">
 						</div>
 					</div>
 
 					<div class="form-group col-md-6">
 						<label for="senha" class="col-2 col-form-label">Senha</label>
 						<div class="col-10">
-							<input class="form-control" type="password" id="senha" ng-model="senha">
+							<input class="form-control" type="password" id="senha" >
 						</div>
 					</div>
 
 					<div class="form-group col-md-3">
 						<label for="cep" class="col-2 col-form-label">CEP</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="cep" ng-model="cep">
+							<input class="form-control" onblur="buscacep(this.value);" type="text" id="cep">
 						</div>
 					</div>
 
 					<div class="form-group col-md-3">
 						<label for="numero" class="col-2 col-form-label">Numero</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="numero" ng-model="numero">
+							<input class="form-control" type="text" id="numero" >
 						</div>
 					</div>
 
 					<div class="form-group col-md-6">
 						<label for="complemento" class="col-2 col-form-label">Complemento</label>
 						<div class="col-10">
-							<input class="form-control" type="text" id="complemento" ng-model="complemento">
+							<input class="form-control" type="text" id="complemento" >
 						</div>
 					</div>
 
 					<div class="btn-group btn-group-md" role="group" aria-label="...">
-						<input type="submit" id="btnMapstemp" class="btn btn-primary btn-sm" value="Buscar CEP" ng-click="endereco.doClick(item, $event)">
+						<input type="submit" id="buscacep" class="btn btn-primary btn-sm" value="Buscar">
 					</div>
 					<div class="form-group">
 
 
 						<label class="col-lg-2 control-label font-form">Logradouro</label>
 						<div class="col-lg-4">
-							<input type="text" id="logradouro" class="form-control col-lg-2" ng-model="endereco.logradouro" disabled=""><br>
+							<input type="text" id="logradouro" class="form-control col-lg-2"  ><br>
 						</div>
 
 					</div>
@@ -151,23 +131,24 @@
 
 						<label class="col-lg-1 control-label font-form">Bairro</label>
 						<div class="col-lg-2">
-							<input type="text" id="bairro" class="form-control" ng-model="endereco.bairro" disabled=""><br>
+							<input type="text" id="bairro" class="form-control" ><br>
 						</div>
 
 						<label class="col-lg-1 control-label font-form">Cidade</label>
 						<div class="col-lg-2">
-							<input type="text" id="cidade" class="form-control" ng-model="endereco.cidade" disabled=""><br>
+							<input type="text" id="cidade" class="form-control" ><br>
 						</div>
 						<label class="col-lg-1 control-label font-form">UF</label>
 						<div class="col-lg-2">
-							<input type="text" id="uf" class="form-control col-lg-2" ng-model="endereco.estado" disabled=""><br>
+							<input type="text" id="uf" class="form-control col-lg-2" ><br>
 						</div>
 						<p style="text-align:right;">
 							<input type="submit" class="btn btn-primary btn-sm col-md-2" id="btnMaps" value="Mostrar no mapa"/>
 						</p>
 					</div>                                                
-				</form>  
 			</div>
+                    							<input type="submit" class="btn btn-primary btn-sm col-md-2" id="cadastrar" value="Cadastrar"/>
+
 		</div>
 		<div class="row">
 			<div class="col-md-12">
@@ -180,7 +161,6 @@
 	</div>
 
 	
-</div> <!-- /container -->
 </body>
 
 <!-- Bootstrap Javascript -->

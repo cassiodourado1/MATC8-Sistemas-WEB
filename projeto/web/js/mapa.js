@@ -1,6 +1,6 @@
 var geocoder;
 var map;
-var marker;
+var marcador;
 
 var latitude;
 var longitude;
@@ -14,23 +14,21 @@ var uf;
 var endereco;
 
 function initialize() {
-    var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
+    var latlng = new google.maps.LatLng(-13.0024602, -38.5089752);
     var options = {
-        zoom: 5,
+        zoom: 17,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
     map = new google.maps.Map(document.getElementById("mapa"), options);
-
     geocoder = new google.maps.Geocoder();
-
-    marker = new google.maps.Marker({
+    marcador = new google.maps.Marker({
         map: map,
         draggable: true,
     });
 
-    marker.setPosition(latlng);
+    marcador.setPosition(latlng);
 }
 
 $(document).ready(function () {
@@ -49,7 +47,7 @@ $(document).ready(function () {
                     
 
                     var location = new google.maps.LatLng(latitude, longitude);
-                    marker.setPosition(location);
+                    marcador.setPosition(location);
                     map.setCenter(location);
                     map.setZoom(16);
                 }

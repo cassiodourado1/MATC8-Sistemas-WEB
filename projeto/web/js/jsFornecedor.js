@@ -1,25 +1,9 @@
 window.onload = function () {
     var cadastrarJs = document.getElementById("cadastrar");
-    var editarJs = document.getElementById("editar");
-    var excluirJs = document.getElementById("excluir");
-    var localizarJs = document.getElementById("localizar");
     
-  
-    cadastrarJs.onclick = function () {
-       // alert("clicou em cadastrar");
+      cadastrarJs.onclick = function () {
+        alert("clicou em cadastrar");
         Cadastrar();
-    };
-
-    editarJs.onclick = function () {
-        Editar();
-    };
-
-    excluirJs.onclick = function () {
-        Excluir();
-    };
-
-    localizarJs.onclick = function () {
-        Localizar();
     };
 };
 
@@ -97,3 +81,4 @@ function Cadastrar() {
     };
     xmlreq.send(null);
 }
+

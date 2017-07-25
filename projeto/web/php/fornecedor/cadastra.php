@@ -30,20 +30,20 @@ if ($query1 == 1) {
     echo 0;
 } else {
     //cadastra endereço e pega o id do endereço inserido
-    @mysqli_query($_SG['link'],"INSERT INTO `quero_quentinha`.`endereco`(`logradouro`,`bairro`,`numero`,`cidade`,
-                                `cep`,`complemento`,`latitude`,`longitude`)
-                   VALUES ('$logradouro','$bairro','$numero','$cidade','$cep','$complemento','$latitude','$longitude')");
+    @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`endereco`(`logradouro`,`bairro`,`numero`,`cidade`,
+                                `cep`,`uf`,`complemento`,`latitude`,`longitude`)
+                   VALUES ('$logradouro','$bairro','$numero','$cidade','$cep','$estado','$complemento','$latitude','$longitude')");
     
     $endereco = mysqli_insert_id($_SG['link']);
     
     //cadastra fornecedor com o id do endereço de cima
-    @mysqli_query($_SG['link'],"INSERT INTO `quero_quentinha`.`fornecedor`(`nome`,`telefone`,`email`,
+    @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`fornecedor`(`nome`,`telefone`,`email`,
                                 `endereco`,`cpfcnpj`,`site`)
                     VALUES
                     ('$nome','$telefone','$email','$endereco','$cpfcnpj','$site')");
     
    //cadastra o login do maluco
-    @mysqli_query($_SG['link'],"INSERT INTO `quero_quentinha`.`login` (`senha`, `situacao`, `cpfcnpj`)
+    @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`login` (`senha`, `situacao`, `cpfcnpj`)
                     VALUES
                     ('$senha','Ativo','$cpfcnpj')");
     echo 1;
