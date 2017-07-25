@@ -7,10 +7,7 @@ window.onload = function () {
         Cadastrar();
     };
     
-      MarcarMapaJs.onclick = function () {
-        alert("clicou em marcar");
-        marcarMapa();
-    };
+   
 };
 
 
