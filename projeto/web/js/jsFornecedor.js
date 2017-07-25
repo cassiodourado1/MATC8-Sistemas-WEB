@@ -1,9 +1,15 @@
 window.onload = function () {
     var cadastrarJs = document.getElementById("cadastrar");
+    var MarcarMapaJs = document.getElementById("btnMaps");
     
       cadastrarJs.onclick = function () {
         alert("clicou em cadastrar");
         Cadastrar();
+    };
+    
+      MarcarMapaJs.onclick = function () {
+        alert("clicou em marcar");
+        marcarMapa();
     };
 };
 
@@ -81,4 +87,3 @@ function Cadastrar() {
     };
     xmlreq.send(null);
 }
-
