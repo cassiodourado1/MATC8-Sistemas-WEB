@@ -37,6 +37,7 @@ $(document).ready(function () {
     function carregarNoMapa(endereco) {
         geocoder.geocode({ 'address': endereco + ', Brasil', 'region': 'BR' }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
+                
                 if (results[0]) {
                     latitude = results[0].geometry.location.lat();
                     longitude = results[0].geometry.location.lng();
@@ -51,6 +52,8 @@ $(document).ready(function () {
                     map.setCenter(location);
                     map.setZoom(16);
                 }
+            }else{
+                alert("xiiiiiiiii" + status);
             }
         });
     }
