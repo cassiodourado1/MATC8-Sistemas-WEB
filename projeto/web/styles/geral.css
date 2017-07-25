@@ -7,6 +7,10 @@
 	background: none;
 }
 
+.collapse.navbar-collapse.menu-header{
+    justify-content: flex-end !important;
+}
+
 .tit_page {
 	text-shadow: 2px 1px 1px rgba(9,8,8,0.5);
     text-decoration: none;
