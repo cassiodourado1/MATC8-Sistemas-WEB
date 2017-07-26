@@ -31,6 +31,54 @@ function CriaRequest() {
         return request;
 }
 
+var submitFormFornecedor = function() {
+    
+    var nome     = document.getElementById("nome");
+    var cpfcnpj  = document.getElementById("cpfcnpj");
+    var site     = document.getElementById("site");
+    var telefone = document.getElementById("telefone");
+    var senha    = document.getElementById("senha");
+    var email    = document.getElementById("email");
+    var cep      = document.getElementById("cep");
+    
+    if (!nome) {
+        alert('Insira o Nome do Fornecedor!');
+        return false;
+    }
+    
+    if (!cpfcnpj) {
+        alert('Insira o CPF/CNPJ!');
+        return false;
+    }
+    
+    if (!site) {
+        alert('Insira o Site!');
+        return false;
+    }
+    
+    if (!telefone) {
+        alert('Insira o Telefone!');
+        return false;
+    }
+    
+    if (!senha) {
+        alert('Insira a Senha!');
+        return false;
+    }
+    
+    if (!email) {
+        alert('Insira o Email!');
+        return false;
+    }
+    
+    if (!cep) {
+        alert('Insira o CEP!');
+        return false;
+    }
+    
+    return true;
+}
+
 function Cadastrar() {
     //Declaração de Variáveis
     var xmlreq = CriaRequest();
