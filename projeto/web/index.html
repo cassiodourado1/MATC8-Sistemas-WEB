@@ -1,69 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/geral.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-	
-</head>
-<body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            <img src="logoqueroquentinha.png" width="325" height="105" class="d-inline-block align-top" alt="">
-        </a>
-        
-        <div class="collapse navbar-collapse menu-header" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="fornecedor.html">Cadastrar Fornecedor</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mapageral.html">Visualizar Fornecedores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="tit_page">Quero Quentinha - Busca de CEP</h1>
-            <p>Cadastro de fornecedores</p>  			
-            <form name="verifyForm" ng-submit="submitForm()" novalidate>
-                <div class="input-group input-group-lg col-xs-1" style="margin: auto;" ng-class="{'has-error': verifyForm.verifyCode.$invalid}">
-                    <input type="text" class="form-control" placeholder="informe o CEP" style="min-width:15em">
-                    <span class="input-group-addon"  style="background-color:#6e5cbf;" role="button">
-                        <span id="filter" onclick="submitForm();" style="color: #ffffff">
-                            buscar CEP
-                        </span>
-                    </span>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="CSS/estilo.css" rel="stylesheet">
+        	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <img src="logoqueroquentinha.png" width="325" height="105" class="d-inline-block align-top" alt="">
+
+        <ul class="barra_navegacao">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mapageral.html">Onde tem Quentinha</a></li>
+            <li><a href="fornecedor.html">Cadastro de Fornecedor</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+        <div class="container" style="align-items:center">
+
+                <h1>Peça sua Quentinha agora!</h1>
+                <h3>As melhores quentinhas da sua região.</h3>
+                <div id="busca">                    
+                    <input type="text" class="input_CEF_home" id="cep" placeholder="informe o CEP">
+                    <input type="button" id="buscarcep" class="btn" value="Buscar CEP" onclick="buscarcep(getElementById('cep').value);">
                 </div>
-            </form>
-        </div>
-    </div>
-    
-    
-    
-</body>
+                                <div id="endereco_cep"></div>
 
-<!-- Bootstrap Javascript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                <div class="jumbotron" style="margin-top: 5%;">
+                    <div id="mapa" style="height: 300px; width: 600px"></div>                        
+                </div>
+            </div>
+    </body>
 
-<!-- Maps API Javascript -->
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
+
+    <!-- Maps API Javascript -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
+    <!-- Inicialização do mapa -->
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/mapa.js"></script>
+    <script type="text/javascript" src="js/jsUtils.js"></script>
 </html>
 

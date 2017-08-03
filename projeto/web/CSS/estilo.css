@@ -1,4 +1,4 @@
-@charset "utf-8";
+/*@charset "utf-8";
 
 .font-form{
 	font-size: 11px;
@@ -12,3 +12,113 @@
 	text-align: center;
 	margin-top: 2%;
 }
+
+.bg-faded {
+	background: none;
+}
+
+.collapse.navbar-collapse.menu-header{
+    justify-content: flex-end !important;
+}
+
+.tit_page {
+	text-shadow: 2px 1px 1px rgba(9,8,8,0.5);
+    text-decoration: none;
+	color: #fff;
+}
+
+.jumbotron, .bg-faded {
+	background: rgb(253,196,1);
+	background: -webkit-linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
+	background: -o-linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
+	background: linear-gradient(rgb(253,196,1) 2%, rgb(254,201,4) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdc401', endColorstr='#fec904',GradientType=0 );
+}
+
+.bg-login{
+    background: url(../bgLogin.png) no-repeat center;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.button {
+	background: #DE5D01;
+	background: none;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.logo-login {
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.wrapper {
+    width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login{
+    max-width: 400px;
+}
+.form-control {
+    margin-bottom: 20px;
+}
+
+
+
+*/
+
+
+/*front end de david*/
+body {
+	background:#ffc500;
+	margin:50px;
+	}
+ul.barra_navegacao  { 
+	margin:0; 
+	padding:0;
+	}
+	
+ul.barra_navegacao  li {
+	list-style:none;	
+	display:inline;
+	}
+ul.barra_navegacao  li a {
+	float:left;
+	border-top:0.2em solid #8e6500
+            ;
+	border-right:0.1em solid #de5d01;
+	border-bottom:0.1em solid #909090;
+	border-left:0.1em solid #fff;
+	width:15.0em;
+	font:1em  Verdana, Arial, Helvetica, 
+	sans-serif;
+	background:#ffc500;
+	color:#333;
+	text-align:center;
+	padding:0  0.2em 0.2em  0;
+	text-decoration:none;
+	}
+ul.barra_navegacao  a:hover{
+	background: darkorange;
+	color:#000;
+	border-color:#000 #000 #000 #000;
+	}

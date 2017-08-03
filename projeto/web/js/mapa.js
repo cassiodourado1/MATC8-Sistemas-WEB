@@ -66,9 +66,9 @@ $(document).ready(function () {
         cidade = $("#cidade").val();
         uf = $("#uf").val();
 
-        endereco = logradouro + ", "+numero+" - "+bairro+", "+cidade+" - "+uf;
+       endereco = logradouro + ", "+numero+" - "+bairro+", "+cidade+" - "+uf;
 
-       // alert(endereco);
+        alert(endereco);
 
         carregarNoMapa(endereco); // Esse parte. De passar como parametro.
     })
