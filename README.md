@@ -30,12 +30,26 @@ As entregas deverão ser feitas pelo Moodle com exceção da declaração de mem
 A apresentação final terá duração de 10 minutos. O app deverá ser apresentado rodando localmente e slides deverão apresentar a proposta, o desenvolvimento e os resultados do mesmo. A equipe deve trabalhar em conjunto e preparar igualmente todos os seus membros em cada aspecto do projeto. Durante apresentação final cada aluno poderá ser indagado arbitrariamente pelo
 professor.
 
-#TODO list
- - [ ] exportar banco para servidor web
- - [ ] hostear servidor na web
- - [ ] layout (Cassio)
+#Notas importantes sobre a a API do facebook
+Todo acesso as informações do facebook podem ser acessadas utilizando o Graph API do facebook para acesso direto
+ou utilizando a plataforma de plugins deles (link abaixo) para requisições gerais (pagina do face com likes, feed da fanpage, ...)
+
+  - links dos plugins: 
+https://developers.facebook.com/docs/plugins
+
+  - link da API base: 
+https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=1737081642972696%3Ffields%3Dname%2Cfan_count&version=v2.10u
+https://developers.facebook.com/docs/graph-api
+
+#TODO lista de atividades macro
+ - [x] Adicionado API de consulta de CEPs utilizando o "viacep.com.br"
+ - [x] Adicionado API do googlemaps para consulta de latitude e longitude baseado no cep (David)
+ - [x] exportar banco para servidor web
+ - [x] hostear servidor na web
+ - [x] layout (Cassio)
  - [ ] verificação de login ao abrir a página e mostrar que usuario esta logado no sistema (David)
  - [ ] validação de formulario fornecedor (Alexandre)
  - [ ] alterar validação do campo CEP (mensagem de erro)
  - [ ] redirecionar tela apos cadastrar (David)
  - [x] visualização de fornecedores numa pagina contendo mapa (Diego). mapageral.html
+ - [x] adicionado fanpage timelite na pagina home utilizando o facebook plugins e api (contador de like) (Diego)
