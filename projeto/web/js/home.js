@@ -22,4 +22,3 @@ function buscarcep(valor) { //gambiarra
     }
 }
 
-

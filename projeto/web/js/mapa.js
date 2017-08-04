@@ -31,7 +31,7 @@ function initialize() {
     marcador.setPosition(latlng);
 }
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function(){
     initialize();
 
     function carregarNoMapa(endereco) {
