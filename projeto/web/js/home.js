@@ -26,3 +26,16 @@ function buscarcep(valor) { //gambiarra
         }
     }
 }
+
+function callbackLikesFB(content){
+  var likesfb = document.getElementById("likesFb");
+  likesfb.value = content.fan_count;
+  likesfb.innerHTML = content.fan_count;
+  likesfb.style.display="none";
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  var script = document.createElement('script');
+  script.src = 'https://graph.facebook.com/v2.10/1737081642972696?fields=name,fan_count&access_token=EAACEdEose0cBADB3NhwyAbEyODWj9bqGeh045kjYLy4MCANQ0gW5i5dCZAC3xUG9nV5LqxXCN7rtcTxXXkUStq0sOgNnHhZCfpmvVbejEY8ppiZAbt1JjNeIHqnZB9x0ZAWIxcXtIPpmTJHwRuKf9WyciagHejW72ZAyuOyi1m7vEaZCxC76iqSW1ZAhU7wrWt4ZD&callback=callbackLikesFB';
+  document.body.appendChild(script);
+});
