@@ -1,13 +1,18 @@
 function meu_callback(conteudo) {
     if (!("erro" in conteudo)) {
         var endereco_completo = conteudo.logradouro + ", " + conteudo.bairro + ", " + conteudo.localidade + " - " + conteudo.uf;
-        document.getElementById('endereco_cep').innerHTML = endereco_completo;
-        //carregar no mapa o endereco_completo       
+        
+        var enderecocepDiv = document.getElementById('endereco_cep');
+        enderecocepDiv.innerHTML = endereco_completo;
+        enderecocepDiv.value = endereco_completo;
+
+        carregarNoMapa(endereco_completo);
     } else {
-        alert("CEP errado.");
+        alert("CEP inválido.");
     }
 }
 
+//parametros: valor do cep, arquivo de onde vem a requisição
 function buscarcep(valor) { //gambiarra
     var cep = valor.replace(/\D/g, '');
     if (cep != "") {
@@ -21,4 +26,3 @@ function buscarcep(valor) { //gambiarra
         }
     }
 }
-
