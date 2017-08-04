@@ -81,11 +81,18 @@
 .form-control {
     margin-bottom: 20px;
 }
-
-
-
 */
 
+iframe#fbpageIframe{
+  float:left;
+  margin-left:20px;
+}
+
+#mapa{
+  width: 700px;
+  height: 500px;
+  float:left;
+}
 
 /*front end de david*/
 body {
