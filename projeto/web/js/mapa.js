@@ -10,7 +10,6 @@ var numero;
 var bairro;
 var cidade;
 var uf;
-
 var endereco;
 
 function initialize() {
@@ -31,6 +30,7 @@ function initialize() {
     marcador.setPosition(latlng);
 }
 
+//on document ready
 document.addEventListener("DOMContentLoaded", function(){
     initialize();
 
@@ -41,35 +41,28 @@ document.addEventListener("DOMContentLoaded", function(){
                 if (results[0]) {
                     latitude = results[0].geometry.location.lat();
                     longitude = results[0].geometry.location.lng();
-
-                    $('#txtLatitude').val(latitude);
-                    $('#txtLongitude').val(longitude);
                     
-                    
-
                     var location = new google.maps.LatLng(latitude, longitude);
                     marcador.setPosition(location);
                     map.setCenter(location);
                     map.setZoom(16);
                 }
             }else{
-                alert("xiiiiiiiii" + status);
+                alert("Um erro ocorreu, contacte o desenvolvedor." + status);
             }
         });
     }
 
-    $("#btnMaps").click(function() {
+    var btnMapsDiv = document.getElementById("btnMaps");
+    btnMapsDiv.onclick = function(){
 
-        logradouro = $("#logradouro").val();
-        numero = $("#numero").val();
-        bairro = $("#bairro").val();
-        cidade = $("#cidade").val();
-        uf = $("#uf").val();
+      var logradouro = document.getElementById("logradouro").value;
+      var numero = document.getElementById("numero").value;
+      var bairro = document.getElementById("bairro").value;
+      var cidade = document.getElementById("cidade").value;
+      var uf = document.getElementById("uf").value;
 
-       endereco = logradouro + ", "+numero+" - "+bairro+", "+cidade+" - "+uf;
-
-        alert(endereco);
-
-        carregarNoMapa(endereco); // Esse parte. De passar como parametro.
-    })
+      endereco = logradouro + ", "+numero+" - "+bairro+", "+cidade+" - "+uf;
+      carregarNoMapa(endereco);
+    }
 });
