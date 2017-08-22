@@ -84,8 +84,9 @@
 */
 
 iframe#fbpageIframe{
-  float:left;
-  margin-left:20px;
+  width: 100%;
+  padding: 0;
+  min-width: 900px;
 }
 
 #mapa{
