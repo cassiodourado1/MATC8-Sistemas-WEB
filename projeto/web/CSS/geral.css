@@ -1,0 +1,100 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+header {
+    background: url(http://betheme.muffingroupsc.netdna-cdn.com/be/restaurant/wp-content/uploads/2015/02/slide-restaurant-bg.jpg) no-repeat center center;
+    background: url(../bgTopo.png) no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.header, .menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+}
+
+.menu-header {
+    align-items: space-around;
+}
+
+.logo-header {
+    width: 300px;
+    height: auto;
+}
+
+.item-menu {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.item-menu:hover {
+    border-bottom: thin solid #8E6600;
+}
+
+.item-menu-link {
+    color: #8E6600;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box-header-search {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+    color: #fff;
+}
+
+.box-header-title {
+    font-size: 48px;
+    text-shadow: 2px 1px 1px rgba(9,8,8,0.97);
+    text-decoration: none; 
+}
+
+.box-header-subtitle {
+    text-shadow: 1px 1px 1px rgba(9,8,8,0.9);
+}
+
+.sobre {
+    background: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.box-sobre {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.item-box-sobre {
+    padding: 1rem;
+    max-width: calc(33% - 2rem);
+    text-align: center;
+}
+
+.icone-sobre {
+    border-radius: 50%;
+}
+
+.icone-sobre .fa {
+    font-size: 30px;
+}
+
+#mapa {
+    width: 100vw;
+    margin: 0 auto;
+}

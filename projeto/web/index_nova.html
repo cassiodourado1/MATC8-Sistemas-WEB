@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="CSS/estilo.css" rel="stylesheet">
+        <link href="CSS/normalize.css" rel="stylesheet">
+        <link href="CSS/geral.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <nav class="header">
+                    <a href="" class="logo-header"> <img src="logoqueroquentinha.png" width="325" height="105" alt="logo"></a>
+                    <ul class="menu-header">
+                        <li class="item-menu"><a class="item-menu-link" href="#">Home</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="mapageral.html">Encontre Quentinhas</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="fornecedor.html">Cadastro de Fornecedor</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="contato.html">Contato</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="#">Login</a></li>
+                    </ul>
+                </nav>
+
+                <div class="box-header-search">
+                    <h1 class="box-header-title">Pediu, Chegou!</h1>
+                    <h2 class="box-header-subtitle">Os melhores pratos onde você estiver</h2>
+                    <div id="busca">                    
+                        <input type="text" class="input_CEF_home" id="cep" placeholder="informe o CEP">
+                        <input type="button" id="buscarcep" class="btn" value="Buscar CEP" onclick="buscarcep(getElementById('cep').value);">
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="sobre">
+            <div class="container">
+                <h2 class="titulo-secao">Como Funciona</h2>            
+                <div class="box-sobre">
+                    <div class="item-box-sobre">
+                        <span class="icone-sobre"><i class="fa fa-map-o" aria-hidden="true"></i></span>
+                        <h3 class="title-item-box-sobre">Digite o seu cep</h3>
+                        <p class="texto-item-box-sobre">Você será informado dos melhores restaurantes que fazem entregas na sua região.</p>
+                    </div>
+
+                    <div class="item-box-sobre">
+                        <span class="icone-sobre"><i class="fa fa-cutlery" aria-hidden="true"></i></i></span>
+                        <h3 class="title-item-box-sobre">Escolha o melhor prato</h3>
+                        <p class="texto-item-box-sobre">Nossa equipe escolhe a dedo os estabelecimentos e os pratos de cada cardápio. É comida gostosa para todos os dias.</p>
+                    </div>
+
+                    <div class="item-box-sobre">
+                        <span class="icone-sobre"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+                        <h3 class="title-item-box-sobre">Receba em minutos</h3>
+                        <p class="texto-item-box-sobre">rabalhamos com restaurantes bem próximos de onde você está, assim seu prato chega rápido e quente </p>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section id="mapa" class="mapa">
+
+        </section>
+    </body>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/mapa.js"></script>
+    <script type="text/javascript" src="js/jsUtils.js"></script>
+    <script src="https://use.fontawesome.com/c393cc56be.js"></script>
+</html>
+
