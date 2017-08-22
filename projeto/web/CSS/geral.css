@@ -98,3 +98,83 @@ header {
     width: 100vw;
     margin: 0 auto;
 }
+
+:host {
+    display: block;
+
+
+}
+
+.box-item-input {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.box-item-input-phone {
+    display: flex;
+}
+
+.box-item-input-phone .input-fields {
+    padding-right: 0.5rem;
+}
+
+.box-item-input-phone .input-fields:first-child {
+    max-width: 25%;
+    margin-right: 0.5rem;
+}
+
+.input-fields {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    color: #5b5b5b;
+    padding: 10px 10px 10px 10px;
+    box-sizing: content-box;
+    z-index: 2;
+    box-shadow: -3px 3px 1px #ddd;
+    background-color: #f2f2f2;
+    border: #e0e0e0 solid thin;
+    border-radius: 1rem;
+}
+
+.label-fields {
+    width: 100%;
+    position: absolute;
+    color: #FFF;
+    font-weight: bold;
+    top: 0; bottom: 0; left: 0.5rem; right: 0;
+    transition: 0.5s;                
+}
+
+.input-fields:focus {
+    outline: grey auto 5px;
+    border-radius: 1rem;
+}
+
+.input-fields:focus + .label-fields
+{
+    color: #c6c6c6;
+    margin-top: 0px;
+    top: -50%;
+    z-index: 2;
+    transition: 0.2s;  
+}
+
+.formulario-fornecedores {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row wrap;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.column-50 {
+    width: 50%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 8px;
+    max-width: 100%;
+    flex-basis: 100%; 
+}
