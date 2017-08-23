@@ -3,9 +3,6 @@ function meu_callback(conteudo) {
         var endereco_completo = conteudo.logradouro + ", " + conteudo.bairro + ", " + conteudo.localidade + " - " + conteudo.uf;
         
         var enderecocepDiv = document.getElementById('endereco_cep');
-        enderecocepDiv.innerHTML = endereco_completo;
-        enderecocepDiv.value = endereco_completo;
-
         carregarNoMapa(endereco_completo);
     } else {
         alert("CEP inválido.");
