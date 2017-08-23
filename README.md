@@ -42,14 +42,7 @@ https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=
 https://developers.facebook.com/docs/graph-api
 
 #TODO lista de atividades macro
- - [x] Adicionado API de consulta de CEPs utilizando o "viacep.com.br"
- - [x] Adicionado API do googlemaps para consulta de latitude e longitude baseado no cep (David)
- - [x] exportar banco para servidor web
- - [x] hostear servidor na web
- - [x] layout (Cassio)
- - [ ] verificação de login ao abrir a página e mostrar que usuario esta logado no sistema (David)
+ - [ ] Falha de comunicação com o banco de dados no Umbler 
  - [ ] validação de formulario fornecedor (Alexandre)
- - [ ] alterar validação do campo CEP (mensagem de erro)
- - [ ] redirecionar tela apos cadastrar (David)
- - [x] visualização de fornecedores numa pagina contendo mapa (Diego). mapageral.html
- - [x] adicionado fanpage timelite na pagina home utilizando o facebook plugins e api (contador de like) (Diego)
+ - [x] Adicionado fanpage timelite na pagina home utilizando o facebook plugins e api (contador de like) (Diego)
+ - [ ] Corrigir tamanho do botão da fanpage na pagina inicial do sistema
