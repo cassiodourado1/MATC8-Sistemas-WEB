@@ -1,0 +1,171 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title> Cadastro de Fornecedor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	<link href="CSS/estilo.css" rel="stylesheet">
+</head>
+
+<body>
+	
+	
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            QueroQuentinha 
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fornecedor.html">Cadastrar Fornecedor <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mapageral.html">Visualizar Fornecedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+	<div class="container">  <!-- Controle do Buscador de CEP ng-controller é Angular-->
+
+		 <h2> Cadastro de Fornecedores </h2>
+		<div class="row">
+			<div class="col-md-12">
+					<div class="form-group col-md-6">
+						<label for="name" class="col-2 col-form-label">Nome</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="nome" >
+						</div>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="cpfcnpj" class="col-2 col-form-label">CPF/CNPJ</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="cpfcnpj">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="telefone" class="col-2 col-form-label">Telefone</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="telefone" >
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="email" class="col-2 col-form-label">Email</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="email" >
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="site" class="col-2 col-form-label">Site</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="site">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="senha" class="col-2 col-form-label">Senha</label>
+						<div class="col-10">
+							<input class="form-control" type="password" id="senha" >
+						</div>
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="cep" class="col-2 col-form-label">CEP</label>
+						<div class="col-10">
+							<input class="form-control" onblur="buscacep(this.value);" type="text" id="cep">
+						</div>
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="numero" class="col-2 col-form-label">Numero</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="numero" >
+						</div>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="complemento" class="col-2 col-form-label">Complemento</label>
+						<div class="col-10">
+							<input class="form-control" type="text" id="complemento" >
+						</div>
+					</div>
+
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label font-form">Logradouro</label>
+						<div class="col-lg-4">
+							<input type="text" id="logradouro" class="form-control col-lg-2"  ><br>
+						</div>
+					</div>
+
+					<div class="form-group">
+
+
+						<label class="col-lg-1 control-label font-form">Bairro</label>
+						<div class="col-lg-2">
+							<input type="text" id="bairro" class="form-control" ><br>
+						</div>
+
+						<label class="col-lg-1 control-label font-form">Cidade</label>
+						<div class="col-lg-2">
+							<input type="text" id="cidade" class="form-control" ><br>
+						</div>
+						<label class="col-lg-1 control-label font-form">UF</label>
+						<div class="col-lg-2">
+							<input type="text" id="uf" class="form-control col-lg-2" ><br>
+						</div>
+						<p style="text-align:right;">
+							<input type="submit" class="btn btn-primary btn-sm col-md-2" id="btnMaps" value="Mostrar no mapa"/>
+						</p>
+					</div>                                                
+			</div>
+                    							<input type="submit" class="btn btn-primary btn-sm col-md-2" id="cadastrar" value="Cadastrar"/>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron" style="margin-top: 5%;">
+					<div id="mapa" style="height: 328px; width: 100%"></div>                        
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	
+</body>
+
+<!-- Maps API Javascript -->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
+
+<!-- Inicialização do mapa -->
+<script src="js/mapa.js"></script>
+<!-- Consulta CEP -->
+<script src="js/buscaCep.js"></script>
+<!-- Inicialização do mapa -->
+<script src="js/mapa.js"></script>
+
+<script src="js/jsFornecedor.js"></script>
+
+<script type="text/javascript" src="js/jsUtils.js"></script>
+</html>
+
+
