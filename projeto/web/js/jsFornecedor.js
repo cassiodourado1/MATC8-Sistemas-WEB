@@ -31,6 +31,7 @@ function CriaRequest() {
 
 function Cadastrar() {
     var xmlreq = CriaRequest();
+    
 
     var nome = document.getElementById("nome");
     var cpfcnpj = document.getElementById("cpfcnpj");
