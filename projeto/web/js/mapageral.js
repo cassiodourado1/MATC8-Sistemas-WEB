@@ -21,16 +21,13 @@ function CriaRequest() {
 
 //pega dados de latitude e longetude de todos os fornecedores do banco
 function pegaTodosFornecedLatlg() {
-    //Declaração de Variáveis
     var xmlreq = CriaRequest();
-    //alert(latitude + " e " + longitude);
-    
+
     xmlreq.open("GET", "php/fornecedor/carregaTodosForneced.php", true);
-    
+
     xmlreq.onreadystatechange = function () {
         if (xmlreq.readyState == 4) {
             if (xmlreq.status == 200) {
-                var resposta = xmlreq.responseText;
                 var jsonObj = JSON.parse(xmlreq.responseText);
                 adicionaMarkersnoMapa(jsonObj);
             }
@@ -40,9 +37,9 @@ function pegaTodosFornecedLatlg() {
 }
 
 function initialize() {
-    var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
+    var latlng = new google.maps.LatLng(-12.8610198,-38.3938467);
     var options = {
-        zoom: 5,
+        zoom: 10,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -52,39 +49,41 @@ function initialize() {
     geocoder = new google.maps.Geocoder();
 }
 
-function adicionaMarkersnoMapa(jsonObj){
-  //jsonObj é um array json contendo latitude e longitude
-  
-  var markersArray = [];
+function adicionaMarkersnoMapa(jsonObj) {
+    //jsonObj é um array json contendo latitude e longitude
 
-  for(var key in jsonObj){
-    var newMarker = new google.maps.Marker({
-      map: map,
-      draggable: false,
-      position: {
-        lat: parseFloat(jsonObj[key].latitude), 
-        lng: parseFloat(jsonObj[key].longitude)
-      }      
-    });
+    var markersArray = [];
 
-    console.log(jsonObj);
-    message = jsonObj[key].nome+"<br>Telefone: "+jsonObj[key].telefone+"<br>Site: "+jsonObj[key].site;
+    for (var key in jsonObj) {
+        var newMarker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            position: {
+                lat: parseFloat(jsonObj[key].latitude),
+                lng: parseFloat(jsonObj[key].longitude)
+            }
+        });
+        newMarker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
 
-    newMarker['infoWindow'] = new google.maps.InfoWindow({
-      content: message
-    });
 
-    google.maps.event.addListener(newMarker, 'click', function(){
-        this['infoWindow'].open(map, this);
-    });
+        console.log(jsonObj);
+        message = jsonObj[key].nome + "<br>Telefone: " + jsonObj[key].telefone + "<br>Site: " + jsonObj[key].site;
 
-    markersArray.push(newMarker);
-    //var location = new google.maps.LatLng(jsonObj[key].latitude, jsonObj[key].longitude);
-    //marker.setPosition(location);
-  }
+        newMarker['infoWindow'] = new google.maps.InfoWindow({
+            content: message
+        });
+
+        google.maps.event.addListener(newMarker, 'click', function () {
+            this['infoWindow'].open(map, this);
+        });
+
+        markersArray.push(newMarker);
+        //var location = new google.maps.LatLng(jsonObj[key].latitude, jsonObj[key].longitude);
+        //marker.setPosition(location);
+    }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     var map;
 
     initialize();
