@@ -37,8 +37,8 @@ function valida($cpfcnpj, $senha) {
         return 1;
     } else {      
            $senha = md5($senha);
-        $sql = "SELECT * FROM quero_quentinha.login WHERE  cpfcnpj =  '$cpfcnpj' AND senha = '$senha' AND situacao = 'A'";
-        $resultado = mysqli_num_rows(mysqli_query($_SG['link'], $sql));
+        $sql = "SELECT * FROM login WHERE  cpfcnpj =  '$cpfcnpj' AND senha = '$senha' AND situacao = 'A'";
+        $resultado =@mysqli_num_rows(mysqli_query($_SG['link'], $sql));
         if ($resultado===1) {
             $_SESSION['cpfcnpj'] = $cpfcnpj;
             $_SESSION['senha'] = $senha;
