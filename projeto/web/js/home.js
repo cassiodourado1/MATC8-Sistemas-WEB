@@ -1,3 +1,9 @@
+window.onload = function () {
+    initialize();
+    pegaTodosFornecedLatlg();
+};
+
+
 function ready(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
         fn();
@@ -10,6 +16,7 @@ function meu_callback(conteudo) {
     if (!("erro" in conteudo)) {
         var endereco_completo = conteudo.logradouro + ", " + conteudo.bairro + ", " + conteudo.localidade + " - " + conteudo.uf;
         carregarNoMapa(endereco_completo);
+        pegaTodosFornecedLatlg();
     } else {
         alert("CEP inválido.");
     }
@@ -34,7 +41,7 @@ function callbackLikesFB(content) {
     var likesfb = document.getElementById("likesFb");
     likesfb.value = content.fan_count;
     likesfb.innerHTML = content.fan_count;
-    console.log(content.fan_count);
+   // console.log(content.fan_count);
     likesfb.style.display = "none";
 }
 

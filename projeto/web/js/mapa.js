@@ -15,7 +15,7 @@ var endereco;
 function initialize() {
     var latlng = new google.maps.LatLng(-13.0024602, -38.5089752);
     var options = {
-        zoom: 17,
+        zoom: 12,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnMapsDiv) {
         btnMapsDiv.onclick = function () {
 
-             logradouro = document.getElementById("logradouro").value;
-             numero = document.getElementById("numero").value;
-             bairro = document.getElementById("bairro").value;
-             cidade = document.getElementById("cidade").value;
-             uf = document.getElementById("uf").value;
+            logradouro = document.getElementById("logradouro").value;
+            numero = document.getElementById("numero").value;
+            bairro = document.getElementById("bairro").value;
+            cidade = document.getElementById("cidade").value;
+            uf = document.getElementById("uf").value;
 
             endereco = logradouro + ", " + numero + " - " + bairro + ", " + cidade + " - " + uf;
             carregarNoMapa(endereco);

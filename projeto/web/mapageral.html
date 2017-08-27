@@ -1,65 +1,49 @@
 
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  
-  <title>Nossos Fornecedores</title>
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <link href="CSS/estilo.css" rel="stylesheet">
-  <link href="CSS/geral.css" rel="stylesheet">
-  <link href="CSS/fornecedores.css" rel="stylesheet">
-</head>
-  
-<body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <header>
-    <div class="container">
-      <nav class="header">
-        <a href="" class="logo-header"> <img src="logoqueroquentinha.png" width="325" height="105" alt="logo"></a>
-        <ul class="menu-header">
-          <li class="item-menu"><a class="item-menu-link" href="#">Home</a></li>
-          <li class="item-menu"><a class="item-menu-link" href="mapageral.html">Encontre Quentinhas</a></li>
-          <li class="item-menu"><a class="item-menu-link" href="cadastro-de-fornecedores.html">Cadastro de Fornecedor</a></li>
-          <li class="item-menu"><a class="item-menu-link" href="login.html">Login</a></li>
-        </ul>
-      </nav>
+        <title>Nossos Fornecedores</title>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <link href="CSS/estilo.css" rel="stylesheet">
+        <link href="CSS/geral.css" rel="stylesheet">
+        <link href="CSS/fornecedores.css" rel="stylesheet">
+    </head>
 
-    </div>
-  </header>
+    <body>
 
-  
-  <div class="container container-fornecedores">
-    <h2>Onde estão os nossos fornecedores</h2>
-  </div>
-  
-  <section id="mapa" class="mapa"></section>    
+        <header>
+            <div class="container">
+                <nav class="header">
+                    <a href="index.html" class="logo-header"> <img src="IMG/logoqueroquentinha.png" width="325" height="105" alt="logo"></a>
+                    <ul class="menu-header">
+                        <li class="item-menu"><a class="item-menu-link" href="index.html">Home</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="mapageral.html">Encontre Quentinhas</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="cadastro-de-fornecedores.html">Cadastro de Fornecedor</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="login.html">Login</a></li>
+                    </ul>
+                </nav>
 
-    <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '1743314322639796',
-        cookie     : true,
-        xfbml      : true,
-        version    : 'v2.8'
-      });
-      FB.AppEvents.logPageView();   
-    };
-    
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-</body>
+            </div>
+        </header>
 
-<!-- Maps API Javascript -->
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
 
-<!-- Arquivo js contendo funções de manipulação de mapa-->
-<script type="text/javascript" src="js/mapageral.js"></script>
+        <div class="container container-fornecedores">
+            <h2>Onde estão os nossos fornecedores</h2>
+            <a href="carregarLista.php" class="logo-header"> <img src="http://icon-icons.com/icons2/37/PNG/512/list_3600.png" width="30" height="30" alt="logo"></a>
+
+        </div>
+
+        <section id="mapa" class="mapa"></section>    
+
+
+    </body>
+
+    <!-- Maps API Javascript -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDr3PbYh1o9kqjHoV63dT8DBqbvAiLIKZU"></script>
+
+    <!-- Arquivo js contendo funções de manipulação de mapa-->
+    <script type="text/javascript" src="js/mapageral.js"></script>
 
 </html>
 

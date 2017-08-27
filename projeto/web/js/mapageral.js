@@ -1,3 +1,9 @@
+﻿window.onload = function () {
+    initialize();
+    pegaTodosFornecedLatlg();
+};
+
+
 
 function CriaRequest() {
     try {
@@ -66,7 +72,7 @@ function adicionaMarkersnoMapa(jsonObj) {
         newMarker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
 
 
-        console.log(jsonObj);
+//        console.log(jsonObj);
         message = jsonObj[key].nome + "<br>Telefone: " + jsonObj[key].telefone + "<br>Site: " + jsonObj[key].site;
 
         newMarker['infoWindow'] = new google.maps.InfoWindow({
@@ -82,10 +88,3 @@ function adicionaMarkersnoMapa(jsonObj) {
         //marker.setPosition(location);
     }
 }
-
-$(document).ready(function () {
-    var map;
-
-    initialize();
-    pegaTodosFornecedLatlg();
-});

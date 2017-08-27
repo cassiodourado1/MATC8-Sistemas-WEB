@@ -8,16 +8,15 @@ $_SG['servidor'] = 'mysql873.umbler.com:41890';    // Servidor MySQL
 $_SG['usuario'] = 'mizere7925';          // Usuário MySQL
 $_SG['senha'] = 'M[an/|2Ty663';                // Senha MySQL
 $_SG['banco'] = 'qqdb'; // Banco de dados MySQL
-//$_SG['banco'] = 'quero_quentinha'; // Banco de dados MySQL
 $_SG['usuarioLogado'] = '';
 $_SG['senhaLogada'] = '';
- 
+
 $_SG['paginaLogin'] = '../login.html'; // Página de login
 //
 // Verifica se precisa fazer a conexão com o MySQL
 if ($_SG['conectaServidor'] == true) {
-    $_SG['link'] = mysqli_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha'], $_SG['banco'] ) or die("MySQL: Não foi possível conectar-se ao servidor.");
-   mysqli_select_db($_SG['link'], $_SG['banco'] ) or die("MySQL: Não foi possível conectar-se ao banco de dados [" . $_SG['banco'] . "].");
+    $_SG['link'] = mysqli_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha'], $_SG['banco']) or die("MySQL: Não foi possível conectar-se ao servidor.");
+    mysqli_select_db($_SG['link'], $_SG['banco']) or die("MySQL: Não foi possível conectar-se ao banco de dados [" . $_SG['banco'] . "].");
 }
 
 mysqli_set_charset(@$_SG['link'], 'UTF8');
@@ -25,7 +24,6 @@ mysqli_set_charset(@$_SG['link'], 'UTF8');
 if ($_SG['abreSessao'] == true) {
     session_start();
 }
-
 
 function valida($cpfcnpj, $senha) {
     global $_SG;
@@ -35,11 +33,11 @@ function valida($cpfcnpj, $senha) {
         $_SG['usuarioLogado'] = $_SESSION['cpfcnpj'];
         $_SG['senhaLogada'] = $_SESSION['senha'];
         return 1;
-    } else {      
-           $senha = md5($senha);
+    } else {
+        $senha = md5($senha);
         $sql = "SELECT * FROM login WHERE  cpfcnpj =  '$cpfcnpj' AND senha = '$senha' AND situacao = 'A'";
-        $resultado =@mysqli_num_rows(mysqli_query($_SG['link'], $sql));
-        if ($resultado===1) {
+        $resultado = @mysqli_num_rows(mysqli_query($_SG['link'], $sql));
+        if ($resultado === 1) {
             $_SESSION['cpfcnpj'] = $cpfcnpj;
             $_SESSION['senha'] = $senha;
             $_SG['usuarioLogado'] = $_SESSION['cpfcnpj'];

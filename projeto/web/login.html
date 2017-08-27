@@ -1,28 +1,49 @@
 ﻿<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />        
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script type="text/javascript" src="js/jsLogin.js"></script>
-    
-   <link href="CSS/estilo.css" rel="stylesheet">
-        <link href="CSS/geral.css" rel="stylesheet">
-        <link rel="shortcut icon" href="favicon.ico" />
-    
-    <title> Login </title>
-    
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
-    
-                <img src="logoqueroquentinha.png" alt="Logo empresa" class="logo-login">
-                <label for="cpfcnpj" class="sr-only">CPF ou CNPJ</label>
-                <input type="text" id="cpfcnpj" class="form-control" placeholder="CPF ou CNPJ"  required autofocus>
-                <label for="senha" class="sr-only">Senha</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required=""/>      
-                <button id="entrar" class="btn btn-lg btn-primary btn-block" type="submit">ENTRAR</button>   
-</body>
+        <script type="text/javascript" src="js/jsLogin.js"></script>
+
+        <link href="CSS/estilo.css" rel="stylesheet">
+        <link href="CSS/geral.css" rel="stylesheet">
+        <link href="CSS/fornecedores.css" rel="stylesheet">
+        <link rel="shortcut icon" href="IMG/favicon.ico" />
+
+        <title> Login </title>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <nav class="header">
+                    <a href="index.html" class="logo-header"> <img src="IMG/logoqueroquentinha.png" width="325" height="105" alt="logo"></a>
+                    <ul class="menu-header">
+                        <li class="item-menu"><a class="item-menu-link" href="index.html">Home</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="mapageral.html">Encontre Quentinhas</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="cadastro-de-fornecedores.html">Cadastro de Fornecedor</a></li>
+                        <li class="item-menu"><a class="item-menu-link" href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+
+
+
+        <label>CPF ou CNPJ</label>
+        <input type="text" id="cpfcnpj" placeholder="CPF ou CNPJ"  required autofocus>
+
+        <label>Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Senha" required=""/> 
+
+        <button id="entrar" type="submit">ENTRAR</button>   
+
+    </body>
 </html>
 
 

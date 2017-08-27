@@ -1,4 +1,4 @@
-﻿window.onload = function () {
+window.onload = function () {
     var entrarJs = document.getElementById("entrar");
 
     entrarJs.onclick = function () {

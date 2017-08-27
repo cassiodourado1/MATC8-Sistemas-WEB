@@ -31,7 +31,7 @@ function CriaRequest() {
 
 function Cadastrar() {
     var xmlreq = CriaRequest();
-    
+
 
     var nome = document.getElementById("nome");
     var cpfcnpj = document.getElementById("cpfcnpj");
@@ -40,7 +40,7 @@ function Cadastrar() {
     var senha = document.getElementById("senha");
     var email = document.getElementById("email");
     var cep = document.getElementById("cep");
-    var complemento= document.getElementById("complemento");
+    var complemento = document.getElementById("complemento");
 
     xmlreq.open("GET", "php/fornecedor/cadastra.php?nome=" + nome.value
             + "&cpfcnpj=" + cpfcnpj.value
@@ -57,7 +57,7 @@ function Cadastrar() {
             + "&cep=" + cep.value
             + "&bairro=" + bairro
             + "&numero=" + numero, true);
-    
+
 
     xmlreq.onreadystatechange = function () {
         if (xmlreq.readyState == 4) {
