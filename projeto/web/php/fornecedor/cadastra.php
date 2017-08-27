@@ -36,13 +36,13 @@ if ($query1 == 1) {
     
     $endereco = mysqli_insert_id($_SG['link']);
     
-    //cadastra fornecedor com o id do endereço de cima
+    //cadastra fornecedor com o id do endereço de cima, ultimo inserido
     @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`fornecedor`(`nome`,`telefone`,`email`,
                                 `endereco`,`cpfcnpj`,`site`)
                     VALUES
                     ('$nome','$telefone','$email','$endereco','$cpfcnpj','$site')");
     
-   //cadastra o login do maluco
+   //cadastra o login do fornecedor
     @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`login` (`senha`, `situacao`, `cpfcnpj`)
                     VALUES
                     ('$senha','Ativo','$cpfcnpj')");

@@ -6,47 +6,22 @@
     
     <script type="text/javascript" src="js/jsLogin.js"></script>
     
-    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <!-- <link href="CSS/login.css" rel="stylesheet"> -->
-    <link href="styles/geral.css" rel="stylesheet">
+   <link href="CSS/estilo.css" rel="stylesheet">
+        <link href="CSS/geral.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" />
     
     <title> Login </title>
     
 </head>
 
-<body class="bg-login">
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '1743314322639796',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v2.8'
-            });
-            FB.AppEvents.logPageView();   
-        };
-        
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <div class="container">
-        <div class="wrapper">
-            <form class="form-login">       
+<body>
+    
                 <img src="logoqueroquentinha.png" alt="Logo empresa" class="logo-login">
                 <label for="cpfcnpj" class="sr-only">CPF ou CNPJ</label>
                 <input type="text" id="cpfcnpj" class="form-control" placeholder="CPF ou CNPJ"  required autofocus>
                 <label for="senha" class="sr-only">Senha</label>
                 <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required=""/>      
                 <button id="entrar" class="btn btn-lg btn-primary btn-block" type="submit">ENTRAR</button>   
-            </form>
-        </div>
-    </div>
 </body>
 </html>
 

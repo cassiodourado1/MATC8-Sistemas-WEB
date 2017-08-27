@@ -4,8 +4,7 @@ function meu_callback(conteudo) {
         document.getElementById('bairro').value = (conteudo.bairro);
         document.getElementById('cidade').value = (conteudo.localidade);
         document.getElementById('uf').value = (conteudo.uf);
-    } 
-    else {
+    } else {
         alert("CEP errado.");
     }
 }
@@ -21,5 +20,6 @@ function buscacep(valor) {
         } else {
             alert("Formato de CEP inválido.");
         }
-    } 
-};
+    }
+}
+;
