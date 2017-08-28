@@ -5,7 +5,7 @@ body {
 }
 header {
     background: url(http://betheme.muffingroupsc.netdna-cdn.com/be/restaurant/wp-content/uploads/2015/02/slide-restaurant-bg.jpg) no-repeat center center;
-    background: url(../bgTopo.png) no-repeat center center;
+    background: url(../IMG/bgTopo.png) no-repeat center center;
     background-size: cover;
     height: 60vh;
 }
@@ -119,6 +119,18 @@ header {
     margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+    #fb-iframe{
+      margin: 0 0 0 24%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 2048px) {
+    #fb-iframe{
+      margin: 0 0 0 36%;
+    }
+}
+
 :host {
     display: block;
 
@@ -153,9 +165,7 @@ header {
     box-sizing: content-box;
     z-index: 2;
     box-shadow: -3px 3px 1px #ddd;
-    background-color: #f2f2f2;
-    border: #e0e0e0 solid thin;
-    border-radius: 1rem;
+    border: #ffc500 solid thin;
 }
 
 .label-fields {
@@ -168,13 +178,12 @@ header {
 }
 
 .input-fields:focus {
-    outline: grey auto 5px;
-    border-radius: 1rem;
+    outline: #ffc500;
 }
 
 .input-fields:focus + .label-fields
 {
-    color: #c6c6c6;
+    color: #ffc500;
     margin-top: 0px;
     top: -50%;
     z-index: 2;
