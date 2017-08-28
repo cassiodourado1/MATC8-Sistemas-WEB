@@ -1,5 +1,4 @@
 ﻿<?php
-
 include("../data.php");
 //dados pessoais
 $nome = $_GET['nome'];
@@ -16,13 +15,13 @@ $complemento = $_GET['complemento'];
 $bairro = $_GET['bairro'];
 $estado = $_GET['estado'];
 //maps
-$latitude= $_GET['latitude'];
+$latitude = $_GET['latitude'];
 $longitude = $_GET['longitude'];
 $senha = md5($_GET['senha']);
 
 
 
-$busca = @mysqli_query($_SG['link'],"SELECT * FROM fornecedor WHERE cpfcnpj = '$cpfcnpj'");
+$busca = @mysqli_query($_SG['link'], "SELECT * FROM fornecedor WHERE cpfcnpj = '$cpfcnpj'");
 $query1 = @mysqli_num_rows($busca);
 
 
@@ -30,20 +29,20 @@ if ($query1 == 1) {
     echo 0;
 } else {
     //cadastra endereço e pega o id do endereço inserido
-    @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`endereco`(`logradouro`,`bairro`,`numero`,`cidade`,
+    @mysqli_query($_SG['link'], "INSERT INTO `qqdb`.`endereco`(`logradouro`,`bairro`,`numero`,`cidade`,
                                 `cep`,`uf`,`complemento`,`latitude`,`longitude`)
                    VALUES ('$logradouro','$bairro','$numero','$cidade','$cep','$estado','$complemento','$latitude','$longitude')");
-    
+
     $endereco = mysqli_insert_id($_SG['link']);
-    
-    //cadastra fornecedor com o id do endereço de cima
-    @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`fornecedor`(`nome`,`telefone`,`email`,
+
+    //cadastra fornecedor com o id do endereço de cima, ultimo inserido
+    @mysqli_query($_SG['link'], "INSERT INTO `qqdb`.`fornecedor`(`nome`,`telefone`,`email`,
                                 `endereco`,`cpfcnpj`,`site`)
                     VALUES
                     ('$nome','$telefone','$email','$endereco','$cpfcnpj','$site')");
-    
-   //cadastra o login do maluco
-    @mysqli_query($_SG['link'],"INSERT INTO `qqdb`.`login` (`senha`, `situacao`, `cpfcnpj`)
+
+    //cadastra o login do fornecedor
+    @mysqli_query($_SG['link'], "INSERT INTO `qqdb`.`login` (`senha`, `situacao`, `cpfcnpj`)
                     VALUES
                     ('$senha','Ativo','$cpfcnpj')");
     echo 1;
